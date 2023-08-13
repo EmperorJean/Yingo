@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require("./mongo")
 const rateLimit = require("express-rate-limit");
 
-const whitelist = [`https://yingo.pages.dev/`];
+const whitelist = [`https://yingo.pages.dev`];
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1 || !origin) {
@@ -16,8 +16,8 @@ const corsOptions = {
 }
 // Enable rate limiting
 const apiLimiter = rateLimit({
-    windowMs: 10 * 60 * 1000,  // 10 minutes
-    max: 500,                 // limit to 500 requests
+    windowMs: process.env.WINDOWMS, 
+    max: process.env.MAX,
     message: "Too many requests from this IP. Please try again later."
  });
 
