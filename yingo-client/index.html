@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yingo - Youtuber Bingo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <header>
+        <h1>Yingo (Youtuber Bingo alpha)</h1>
+        <div class="button">
+            <button id="generateButton">Create New Game</button>
+            <button id="themeToggle">Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="shareContainer">
+            <div class="share-box">
+                <label for="shareGameLink">Share this game:</label>
+                <div class="share-input-group">
+                    <input type="text" id="shareGameLink" readonly>
+                    <button onclick="copyLink('shareGameLink')">Copy</button>
+                </div>
+            </div>
+            
+            <div class="share-box">
+                <label for="shareBoardLink">Share your board:</label>
+                <div class="share-input-group">
+                    <input type="text" id="shareBoardLink" readonly>
+                    <button onclick="copyLink('shareBoardLink')">Copy</button>
+                </div>
+            </div>
+        </div>
+        <table id="bingoBoard">
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Inspired by <a href="https://twitter.com/Pieosaurus3/status/1684781240405151744">@Pieosaurus3</a> | Ideas? Send them to <a href="https://twitter.com/emperorjean_">Me</a> </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

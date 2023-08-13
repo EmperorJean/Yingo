@@ -1,0 +1,167 @@
+:root {
+/* Vibrant Light Mode Colors */
+--background-light: #e2e8f0;
+--text-light: #2d3748;
+--header-background-light: #a0aec0;
+--button-background-light: #718096;
+--button-background-hover-light: #4a5568;
+--border-color-light: #4a5568;
+--marked-bg-color: #a3be8c;
+--marked-text-color: #2e3440;
+
+/* Dark Mode Colors (Nord Theme) */
+--background-dark: #2e3440;
+--text-dark: #d8dee9;
+--header-background-dark: #4c566a;
+--button-background-dark: #5e81ac;
+--button-background-hover-dark: #4c6699;
+--border-color-dark: #d8dee9;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Default Light Mode */
+body {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--header-background-light);
+    color: var(--text-dark);
+}
+
+button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-background-light);
+    color: var(--text-dark);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-background-hover-light);
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table, th, td {
+    border: 1px solid var(--border-color-light);
+}
+
+th, td {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+td {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode header {
+    background-color: var(--header-background-dark);
+}
+
+body.dark-mode table, body.dark-mode th, body.dark-mode td {
+    border-color: var(--border-color-dark);
+}
+
+body.dark-mode button {
+    background-color: var(--button-background-dark);
+}
+
+body.dark-mode button:hover {
+    background-color: var(--button-background-hover-dark);
+}
+
+.marked {
+    background-color: var(--marked-bg-color);
+    color: var(--marked-text-color);
+}
+
+#shareContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.share-box {
+    flex: 0 0 45%; /* This makes it so the boxes will wrap to the next line on smaller screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--background-color);
+}
+
+#shareContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#shareContainer > input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--input-background-color);
+}
+
+#shareContainer > button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    transition: background-color 0.3s;
+}
+
+#shareContainer > button:hover {
+    background-color: var(--button-hover-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
