@@ -1,6 +1,6 @@
 let markedCells = [];
 let url = window.location.origin;
-let api = 'https://yingo-production.up.railway.app/'
+let api = 'https://yingo-production.up.railway.app'
 
 // Function to generate the bingo board
 function populateBoard(board) {
