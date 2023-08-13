@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require("./mongo")
 const rateLimit = require("express-rate-limit");
 
-const whitelist = [`http://localhost:3001`];
+const whitelist = [`https://yingo.pages.dev/`];
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1 || !origin) {
